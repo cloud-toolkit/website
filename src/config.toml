@@ -1,3 +1,45 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://cloudtoolkit.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Cloud Toolkit'
+
+# Language settings
+contentDir = "content/en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+# Useful when translating.
+enableMissingTranslationPlaceholders = true
+navbar_logo = false
+
+[[menu.main]]
+    name = "GitHub"
+    weight = 50
+    url = "https://github.com/cloud-toolkit/cloud-toolkit-aws"
+
+[params]
+copyright = "AstroKube"
+
+[params.ui]
+# Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
+sidebar_search_disable = false
+
+[params.links]
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.developer]]
+  name = "GitHub"
+  url = "https://github.com/cloud-toolkit/cloud-toolkit-aws"
+  icon = "fab fa-github"
+  desc = "Development takes place here!"
+
+[module]
+  proxy = "direct"
+  # uncomment line below for temporary local development of module
+  # replacements = "github.com/google/docsy -> ../../docsy"
+  [module.hugoVersion]
+    extended = true
+    min = "0.73.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+    disable = false
+  [[module.imports]]
+    path = "github.com/google/docsy/dependencies"
+    disable = false
